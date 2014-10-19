@@ -46,28 +46,35 @@ table {
 	border-spacing: 0;
 }
 
-#main_content {
+.content_box {
     background-color: rgba(0,0,0, 0.6);
     padding: 10px;
     border-radius: 10px;
+    margin-bottom: 20px;
 
+}
+
+.content_box h3 {
+    color: white;
 }
 
 /* LAYOUT STYLES */
 body {
   font-size: 1em;
   line-height: 1.5; 
-  background: url(../images/body-bg.png);
+  background: #4F473C;
   font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   color: #6d6d6d;
 
 }
 
 a {
-  color: #d5000d;
+  /*color: #d5000d;*/
+  color: #308ff0;
 }
 a:hover {
-  color: #c5000c;
+  /*color: #c5000c;*/
+    color: #308ff0;
 }
 
 header {
