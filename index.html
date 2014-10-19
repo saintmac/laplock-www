@@ -21,6 +21,20 @@
           ga('send', 'pageview');
 
       </script>
+      <script>
+          /**
+           * Function that tracks a click on an outbound link in Google Analytics.
+           * This function takes a valid URL string as an argument, and uses that URL string
+           * as the event label.
+           */
+          var trackOutboundLink = function(url) {
+              ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
+                      function () {
+                          document.location = url;
+                      }
+              });
+          }
+      </script>
   </head>
 
   <body>
@@ -43,7 +57,7 @@
 
         <section id="downloads" class="clearfix">
           <a href="https://s3-eu-west-1.amazonaws.com/laplock/laplock.app.zip" id="download-zip"
-             class="button"><span>Download alpha</span></a>
+             class="button" onclick=”trackOutboundLink(‘app download’); return false;"><span>Download alpha</span></a>
           <!--<a href="https://github.com/saintmac/laplock-www/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>-->
           <!--<a href="https://github.com/saintmac/laplock-www" id="view-on-github" class="button"><span>View on GitHub</span></a>-->
         </section>
