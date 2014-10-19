@@ -96,6 +96,10 @@ header h2 {
   background: transparent url(../images/body-bg.jpg) 0 0 no-repeat;
   min-height: 595px;
     color: white;
+  background-size: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .inner {
