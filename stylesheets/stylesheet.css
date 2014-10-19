@@ -65,6 +65,13 @@ body {
   background: #4F473C;
   font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   color: #6d6d6d;
+    background: transparent url(../images/body-bg.jpg) no-repeat center center fixed;
+    min-height: 595px;
+    color: white;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 
 }
 
@@ -99,13 +106,16 @@ header h2 {
 }
 
 #container {
-  background: transparent url(../images/body-bg.jpg) 0 0 no-repeat;
+  /*background: transparent url(../images/body-bg.jpg) no-repeat center center fixed;*/
   min-height: 595px;
     color: white;
-  background-size: cover;
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  /*background-size: cover;*/
+  /*-webkit-background-size: cover;*/
+  /*-moz-background-size: cover;*/
+  /*-o-background-size: cover;*/
+  /*position: absolute;*/
+  /*height: 100%;*/
+  /*width: 100%;*/
 }
 
 .inner {
