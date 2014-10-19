@@ -405,6 +405,11 @@ footer a:hover {
   }
 }
 
+.social {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {}
 
