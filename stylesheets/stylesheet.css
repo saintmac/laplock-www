@@ -251,7 +251,7 @@ td {
 }
 
 form {
-  background: #f2f2f2;
+  /*background: #f2f2f2;*/
   padding: 20px;
   
 }
@@ -266,9 +266,21 @@ h1 {
 h2 {
   font-size: 22px;
   font-weight: bold;
-  color: #303030;
+  /*color: #303030;*/
   margin-bottom: 8px;
 } 
+
+input[type=submit] {
+    border: 0;
+    background-attachment: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    background-color: white;
+    cursor: pointer;
+}
 
 h3 {
   color: #d5000d;
