@@ -1,159 +1,75 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Laplock</title>
-      <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-          ga('create', 'UA-55883075-1', 'auto');
-          ga('send', 'pageview');
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-      </script>
-      <script>
-          /**
-           * Function that tracks a click on an outbound link in Google Analytics.
-           * This function takes a valid URL string as an argument, and uses that URL string
-           * as the event label.
-           */
-          var trackOutboundLink = function(url) {
-              ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
-                      function () {
-                          document.location = url;
-                      }
-              });
-          }
-      </script>
-  </head>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-  <body>
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=630431227003582&version=v2.0";
-      fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+        <!-- Add your site or application content here -->
+        <header id="menu">
+            <a href="/" id="logo"><img src="img/logo.png" width="58" height="33"> <span>Laplock</span></a>
+            <a href="#" id="how" class="button cd-btn">
+                How it's work?
+            </a>
+        </header>
+        
+        <div class="desc">
+            <h1 class="desktop">Leave your <br>macbook <br>unattended, <br><strong>worry free</strong></h1>
+            <h1 class="mobile">Leave your macbook unattended, <strong>worry free</strong></h1>
+            <a href="#"><img src="img/macappstore.png" width="213" height="50"></a>
+        </div>
+        <div class="screen">
+            <img src="img/screenmac.png">
+        </div>
 
-    <div id="container">
-      <div class="inner">
-
-        <header>
-          <h1>Laplock</h1>
-          <h2>Leave your macbook unattended, worry free</h2>
+        <div class="cd-panel from-right">
+        <header class="cd-panel-header">
+            <h1>How it's work?</h1>
+            <a href="#0" class="cd-panel-close">Close</a>
         </header>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://s3-eu-west-1.amazonaws.com/laplock/Laplock+0.2.1.app.zip" id="download-zip"
-             class="button" onclick="trackOutboundLink('https://s3-eu-west-1.amazonaws.com/laplock/Laplock+0.2.1.app.zip'); return false;"><span>Download beta</span></a>
-          <!--<a href="https://github.com/saintmac/laplock-www/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>-->
-          <!--<a href="https://github.com/saintmac/laplock-www" id="view-on-github" class="button"><span>View on GitHub</span></a>-->
-        </section>
-        <section class="content_box">
-            We'll be in the mac app store soon! Stay tuned on <a target="_blank" href="https://facebook.com/laplock">Facebook</a> and <a target="_blank" href="https://twitter.com/laplockapp">Twitter</a>
-        </section>
-
-        <hr>
-
-        <section id="main_content" class="content_box">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a></h3>
-
-            <p>What do you do when you leave your MacBook unattended? You worry!</p>
-
-            <p>Now with Laplock you can lock your laptop with your power cord.</p>
-
-            <p>Make sure the power cord is attached, enable the Laplock Mac app, and if somebody tries to get your laptop while you're away, your laptop will:</p>
-
-            <ol>
-                <li>
-                    Alert everyone around,
-                </li>
-                <li>
-                    Message and call you on your phone
-                </li>
-            </ol>
-<!--<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>-->
-
-<!--<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>-->
-        </section>
-        <section id="instructions" class="content_box">
-            <h3>Instructions</h3>
-            <ol>
-                <li>Download the <a href="https://s3-eu-west-1.amazonaws.com/laplock/laplock.app.zip">Laplock.app</a> file</li>
-                <li>Open the app to add it to the menu bar</li>
-                <li>Unplug the power cord from your MacBook and listen to the alarm go off</li>
-                <li>Worry no more about leaving your MacBook unattended</li>
-            </ol>
-
-            <h3>Telephone Notifications</h3>
-            <ol>
-                <li>To receive an SMS messages and phone calls use the "Register Phone" option to add your phone number</li>
-                <li>To receive a notification through Yo, use the "Register Yo" option</li>
-            </ol>
-
-            <h3>Very Important!</h3>
-            <ol>
-                <!--<li>If your computer is put to sleep, the alarms and notifications will not be triggered</li>-->
-                <li>The computer needs an internet connection to trigger the telephone and Yo notifications</li>
-                <li>Obviously, if your laptop is stolen, we're very sorry, but we're not responsible. We didn't steal it!</li>
-            </ol>
-
-        </section>
-        <section class="content_box">
-            <!-- Begin MailChimp Signup Form -->
-            <div id="mc_embed_signup">
-                <form action="//vyte.us7.list-manage.com/subscribe/post?u=c8f242617f50c1f47d5c070d3&amp;id=506214259b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <div id="mc_embed_signup_scroll">
-                        <h2>Subscribe to our mailing list</h2>
-                        <div class="mc-field-group">
-                            <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-                            </label>
-                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-                        </div>
-                        <div id="mce-responses" class="clear">
-                            <div class="response" id="mce-error-response" style="display:none"></div>
-                            <div class="response" id="mce-success-response" style="display:none"></div>
-                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;"><input type="text" name="b_c8f242617f50c1f47d5c070d3_506214259b" tabindex="-1" value=""></div>
-                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                    </div>
-                </form>
-            </div>
-
-            <!--End mc_embed_signup-->
-        </section>
-        <section class="social">
-            <div>
-                <a href="https://twitter.com/laplockapp" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @laplockapp</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-            </div>
-            <div>
-                <div class="fb-like" data-href="https://www.laplock.co" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-
-            </div>
-
-        </section>
-
-        <!--<footer>-->
-          <!--Laplock-www is maintained by <a href="https://github.com/saintmac">saintmac</a><br>-->
-          <!--This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.-->
-        <!--</footer>-->
+        <div class="cd-panel-container">
+            <div class="cd-panel-content">
+                <h3>Instructions</h3>
+                <p>Download the Laplock.app file
+                Open the app to add it to the menu bar
+                Unplug the power cord from your MacBook and listen to the alarm go off
+                Worry no more about leaving your MacBook unattended</p>
+                <h3>Telephone Notifications</h3>
+                <p>To receive an SMS messages and phone calls use the "Register Phone" option to add your phone number
+                To receive a notification through Yo, use the "Register Yo" option</p>
+                <h3>Very Important!</h3>
+                <p>The computer needs an internet connection to trigger the telephone and Yo notifications
+                Obviously, if your laptop is stolen, we're very sorry, but we're not responsible. We didn't steal it!</p>
+            </div> <!-- cd-panel-content -->
+        </div> <!-- cd-panel-container -->
+    </div> <!-- cd-panel -->
 
 
-      </div>
-    </div>
-  </body>
+
+        <div class="bg"></div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        
+    </body>
 </html>
