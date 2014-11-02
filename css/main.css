@@ -37,6 +37,12 @@ header#menu #logo {
   line-height: 33px;
   font-size: 1.4rem;
 }
+@media screen and (max-width: 400px) {
+  header#menu #logo {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+}
 header#menu #logo span {
   position: relative;
   left: 10px;
@@ -58,6 +64,11 @@ header#menu a.button {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+@media screen and (max-width: 400px) {
+  header#menu a.button {
+    margin-left: 30px;
+  }
 }
 header#menu a.button:hover {
   background: white;
@@ -93,6 +104,7 @@ header#menu a.button:hover {
     position: static;
     display: block;
     margin-top: 50px;
+    padding-left: 25px;
   }
 }
 .desc .desktop {
