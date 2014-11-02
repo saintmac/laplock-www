@@ -23,6 +23,10 @@ body {
   right: 0;
   z-index: -2;
 }
+a.btn {
+  font-weight: bold;
+  color: black;
+}
 header#menu {
   position: fixed;
   top: 0;
@@ -290,8 +294,8 @@ header#menu a.button:hover {
   position: fixed;
   width: 90%;
   height: 50px;
-  line-height: 50px;
-  background: transparent;
+  line-height: 27px;
+  background: #fe8868;
   z-index: 2;
   -webkit-transition: top 0.3s 0s;
   -moz-transition: top 0.3s 0s;
@@ -299,9 +303,9 @@ header#menu a.button:hover {
 }
 .cd-panel-header h1 {
   font-weight: bold;
-  color: #8e3213;
+  color: white;
   padding-left: 5%;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 200;
 }
 .from-right .cd-panel-header,
@@ -339,8 +343,10 @@ header#menu a.button:hover {
   /* image replacement */
   display: inline-block;
   overflow: hidden;
-  text-indent: 100%;
+  color: white;
+  text-decoration: none;
   white-space: nowrap;
+  padding-top: 10px;
 }
 .cd-panel-close::before,
 .cd-panel-close::after {
@@ -370,7 +376,7 @@ header#menu a.button:hover {
   transform: rotate(-45deg);
 }
 .no-touch .cd-panel-close:hover {
-  background-color: #424f5c;
+  background-color: transparent;
 }
 .no-touch .cd-panel-close:hover::before,
 .no-touch .cd-panel-close:hover::after {
