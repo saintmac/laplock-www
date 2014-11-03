@@ -11,4 +11,21 @@ jQuery(document).ready(function($){
 			event.preventDefault();
 		}
 	});
+
+	//open mailing
+	$('.mail').on('click', function(event){
+		event.preventDefault();
+		$('#footer').addClass('is-visible');
+		$('.bg-hover').addClass('is-visible');
+	});
+	//clode mailing
+	$('.bg-hover').on('click', function(event){
+			
+			$('#footer').removeClass('is-visible');
+			$('.bg-hover').removeClass('is-visible');
+			event.preventDefault();
+			
+	});
+
+
 });

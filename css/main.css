@@ -27,6 +27,126 @@ a.btn {
   font-weight: bold;
   color: black;
 }
+.bg-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: none;
+}
+.bg-hover.is-visible {
+  display: block;
+}
+footer#footer {
+  position: fixed;
+  bottom: -100%;
+  width: 100%;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.95);
+  color: black;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+footer#footer.is-visible {
+  bottom: 0;
+}
+@media screen and (max-width: 640px) {
+  footer#footer {
+    height: auto;
+  }
+}
+footer#footer #mc_embed_signup {
+  padding-left: 15px;
+}
+footer#footer #mc_embed_signup #mc_embed_signup_scroll h2 {
+  float: left;
+  font-size: 1rem;
+  margin: 0;
+  margin-top: 2px;
+  margin-right: 15px;
+}
+@media screen and (max-width: 640px) {
+  footer#footer #mc_embed_signup #mc_embed_signup_scroll h2 {
+    float: none;
+    text-align: center;
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+}
+footer#footer #mc_embed_signup #mc_embed_signup_scroll .mc-field-group {
+  float: left;
+}
+@media screen and (max-width: 640px) {
+  footer#footer #mc_embed_signup #mc_embed_signup_scroll .mc-field-group {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+footer#footer #mc-embedded-subscribe {
+  margin-top: -5px;
+  padding: 10px 15px;
+  background: black;
+  border: 1px solid black;
+  border-radius: 30px;
+  font-weight: 200;
+  color: white;
+  float: right;
+  position: relative;
+  right: 15px;
+}
+@media screen and (max-width: 640px) {
+  footer#footer #mc-embedded-subscribe {
+    margin: 0 auto;
+    float: none;
+    position: static;
+  }
+}
+footer#footer .clear {
+  text-align: center;
+}
+#mce-EMAIL {
+  margin-top: -5px;
+  padding: 10px 15px;
+  background: none;
+  border: 1px solid black;
+  border-radius: 30px;
+  font-weight: 200;
+}
+#mce-EMAIL::-webkit-input-placeholder {
+  color: black;
+}
+#mce-EMAIL::-moz-placeholder {
+  color: black;
+}
+/* firefox 19+ */
+#mce-EMAIL:-ms-input-placeholder {
+  color: black;
+}
+/* ie */
+.social {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid white;
+  border-radius: 30px;
+  white-space: nowrap;
+  line-height: 50px;
+}
+.macstore {
+  display: block;
+  margin-top: 30px;
+}
 header#menu {
   position: fixed;
   top: 0;
