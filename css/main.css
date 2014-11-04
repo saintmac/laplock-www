@@ -123,6 +123,9 @@ footer#footer .clear {
   border-radius: 30px;
   font-weight: 200;
 }
+#mce-EMAIL:focus {
+  outline: none;
+}
 #mce-EMAIL::-webkit-input-placeholder {
   color: black;
 }
@@ -146,6 +149,7 @@ footer#footer .clear {
 .macstore {
   display: block;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 header#menu {
   position: fixed;
@@ -220,7 +224,7 @@ header#menu a.button:hover {
   width: 40%;
   position: fixed;
   right: 0;
-  top: 100px;
+  top: 70px;
   padding: 30px;
   padding-left: 50px;
 }
@@ -250,7 +254,7 @@ header#menu a.button:hover {
   }
 }
 .desc h1 {
-  font-size: 3.4rem;
+  font-size: 2.5rem;
   font-weight: 200;
 }
 @media screen and (max-width: 900px) {
@@ -260,6 +264,10 @@ header#menu a.button:hover {
 }
 .desc h1 strong {
   font-weight: bold;
+  white-space: nowrap;
+}
+.desc h2 {
+  font-weight: normal;
 }
 .cd-main-content {
   text-align: center;
@@ -583,6 +591,7 @@ header#menu a.button:hover {
   height: 100%;
   padding: 80px 5%;
   overflow: auto;
+  color: #424f5c;
   /* smooth scrolling on touch devices */
   -webkit-overflow-scrolling: touch;
 }
@@ -592,7 +601,6 @@ header#menu a.button:hover {
 .cd-panel-content p {
   font-size: 14px;
   font-size: 0.875rem;
-  color: #424f5c;
   line-height: 1.4;
   margin: 2em 0;
 }

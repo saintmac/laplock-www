@@ -26,6 +26,9 @@ jQuery(document).ready(function($){
 			event.preventDefault();
 			
 	});
+	setTimeout(function() {
+		$('.mail').click()
+	}, 15000);
 
 
 });
