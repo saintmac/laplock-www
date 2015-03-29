@@ -61,6 +61,9 @@
 <div class="desc">
     <h1>Buy a subscription</h1>
     <!--<h2>This page is a work in progress</h2>-->
+    <a href="https://facebook.com/laplock" class="social facebook">Facebook</a>
+    <a href="https://twitter.com/laplockapp" class="social twitter">Twitter</a>
+    <a href="#" class="social mail">Mailing list</a>
 </div>
 <div style="margin-top: 100px; margin-left: 50px;">
     <p>To enable SMS notifications,<br>
@@ -69,6 +72,14 @@
         <form action="https://laplock-pp.herokuapp.com/pay" method="POST">
             <input type="text" name="number" id="number" placeholder="+1xxxxxxxxxx">
             <input type="hidden" name="plan_id" value="n68xhryzerwpcv7">
+            <script>
+                if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+                    document.write('<input type="hidden" name="os" value="mac">');
+                }
+                else {
+                    document.write('<input type="hidden" name="os" value="win">');
+                }
+            </script>
             <script
                     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                     data-key="pk_test_cnhgRCnalZOHUPnEuirA2Wqj"
