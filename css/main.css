@@ -614,3 +614,9 @@ header#menu a.button:hover {
     line-height: 1.6;
   }
 }
+input#number {
+  border-radius: 2px;
+  border: none;
+  height: 30px;
+  padding: 5px;
+}

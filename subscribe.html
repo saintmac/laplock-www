@@ -15,6 +15,24 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -31,7 +49,7 @@
 
 <!-- Add your site or application content here -->
 <header id="menu">
-    <a href="/" id="logo"><img src="img/logo.png" width="58" height="33"> <span>Laplock</span></a>
+    <a href="http://www.laplock.co" id="logo"><img src="img/logo.png" width="58" height="33"> <span>Laplock</span></a>
     <!--<a href="#" id="how" class="button cd-btn">-->
         <!--How does it work?-->
     <!--</a>-->
@@ -45,10 +63,11 @@
     <!--<h2>This page is a work in progress</h2>-->
 </div>
 <div style="margin-top: 100px; margin-left: 50px;">
-    <p>To enable SMS notifications, buy a subscription for $5 / year</p>
+    <p>To enable SMS notifications,<br>
+    buy a subscription for your phone number for $5 / year</p>
     <p>
         <form action="https://laplock-pp.herokuapp.com/pay" method="POST">
-            <input type="text" name="number">
+            <input type="text" name="number" id="number" placeholder="+1xxxxxxxxxx">
             <input type="hidden" name="plan_id" value="n68xhryzerwpcv7">
             <script
                     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
