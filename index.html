@@ -48,6 +48,12 @@
         for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
     mixpanel.init("dea17a779420442c7eb59cf6fdd0aad1");
     mixpanel.track("home page");
+    mixpanel.track_links("#download", "Clicked Download Link");
+    mixpanel.track_links("#facebook", "Clicked Facebook Link");
+    mixpanel.track_links("#twitter", "Clicked Twitter Link");
+    mixpanel.track_links("#mailing", "Clicked Mailing Link");
+    mixpanel.track_links("#how", "Clicked How Link");
+
     </script><!-- end Mixpanel -->
     </head>
     <body>
@@ -69,6 +75,9 @@
             <a href="#" id="how" class="button cd-btn">
                 How does it work?
             </a>
+            <!--<a href="#" id="how" class="button cd-btn">-->
+                <!--Techcrunch-->
+            <!--</a>-->
         </header>
 
         <div>
@@ -78,13 +87,18 @@
             <h1 class="desktop">Leave your macbook unattended, <strong>worry free</strong></h1>
             <h1 class="mobile">Leave your macbook unattended, <strong>worry free</strong></h1>
             <h2>Your power cord is your lock</h2>
-            <p>
-                We'll be on the mac app store soon!<br/>Stay tuned:
-            </p>
+            <!--<p>-->
+                <!--We'll be on the mac app store soon!<br/>Stay tuned:-->
+            <!--</p>-->
             <!--<a href="#" class="macstore"><img src="img/macappstore.png" width="213" height="50"></a>-->
-            <a href="https://facebook.com/laplock" class="social facebook">Facebook</a>
-            <a href="https://twitter.com/laplockapp" class="social twitter">Twitter</a>
-            <a href="#" class="social mail">Mailing list</a>
+            <p class="download-container">
+                <a href="https://s3-eu-west-1.amazonaws.com/laplock/Laplock+1.0.zip" class="download"
+                   id="download">Download the
+                    app</a>
+            </p>
+            <a href="https://facebook.com/laplock" class="social facebook" id="facebook">Facebook</a>
+            <a href="https://twitter.com/laplockapp" class="social twitter" id="twitter">Twitter</a>
+            <a href="#" class="social mail" id="mailing">Mailing list</a>
 
         </div>
         <div class="screen">
@@ -104,24 +118,29 @@
                 <h3>Instructions</h3>
                 <ol>
                     <li>Download the app</li>
-                    <li>Launch the app to add it to the menu bar</li>
-                    <li>Use the "Register Yo" and/or "Register Phone" option to set up your alerts</li>
+                    <li>Launch the app to add it to your menu bar</li>
+                    <!--<li>Use the "Register Yo" and/or "Register Phone" option to set up your alerts</li>-->
+                    <li>Use the "Add or Modify Phone" option to set up your alerts</li>
+                    <li>To activate the phone notifications, you'll need to buy a subscription for $5 / year</li>
+                    <li>Lock your Mac (using Laplock menu or the usual mac shortcut)</li>
                     <li>Unplug the power cord from your MacBook and listen to the alarm go off</li>
-                    <li>Look at your phone: you just received an SMS and/or a Yo notifying you about your laptop being stolen!</li>
+                    <li>Look at your phone: you just received an SMS notifying you about your laptop being stolen!</li>
                     <li>Worry no more about leaving your MacBook unattended</li>
                 </ol>
                 <h3>Telephone Notifications</h3>
                 <ul>
                     <li>To receive a SMS notification us the "Register Phone" option to add your phone number</li>
-                    <li>
-                        To receive a notification through Yo, use the "Register Yo" option
-                    </li>
+                    <li>To enable this feature, you need to <a href="https://laplock.divshot.io/subscribe.html">buy a $5 / year subscription</a>. Indeed sending an SMS does cost us money so we decided to charge money to ensure the
+                        sustainability of this project.</li>
+                    <!--<li>-->
+                        <!--To receive a notification through Yo, use the "Register Yo" option-->
+                    <!--</li>-->
                 </ul>
                 <h3>Disclaimer</h3>
                 <ul>
-                    <li>The computer needs an internet connection to trigger the SMS and Yo notification</li>
+                    <li>The computer needs an internet connection to trigger the SMS notification</li>
                     <li>Your phone needs a cellphone connection to receive the SMS notification</li>
-                    <li>Your phone needs an internet connection to receive the Yo notification</li>
+                    <!--<li>Your phone needs an internet connection to receive the Yo notification</li>-->
                     <li>If your laptop is stolen, we're very sorry, but we're not responsible. We didn't steal it!</li>
                 </ul>
             </div> <!-- cd-panel-content -->
