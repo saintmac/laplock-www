@@ -88,11 +88,13 @@ mixpanel.track_links("#how", "Clicked How Link");
     <a href="#" class="social mail">Mailing list</a>
 </div>
 <div style="margin-top: 100px; margin-left: 50px;">
-    <p>To enable SMS notifications,<br>
-    buy a subscription for your phone number for $5 / year</p>
+    <h2>To enable SMS notifications,<br>
+    buy a subscription for your phone number for $5 / year</h2>
     <p>
-        <form action="https://laplock-pp.herokuapp.com/pay" method="POST">
-            <input type="text" name="number" id="number" placeholder="+1xxxxxxxxxx">
+    Your phone number should start with a country code,<br>such as <i>+1</i> for the US or <i>+33</i> for France.
+    </p>
+        <form action="https://laplock.herokuapp.com/pay" method="POST">
+            <input type="text" name="number" id="number" placeholder="+1xxxxxxxxxx" autofocus="autofocus">
             <input type="hidden" name="plan_id" value="n68xhryzerwpcv7">
             <script>
                 if (navigator.userAgent.indexOf('Mac OS X') != -1) {
@@ -146,6 +148,7 @@ mixpanel.track_links("#how", "Clicked How Link");
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
+<script src="js/subscribe.js"></script>
 
 
 </body>
