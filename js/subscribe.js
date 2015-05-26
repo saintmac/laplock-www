@@ -35,7 +35,6 @@ jQuery(document).ready(function($){
 
     var $number = $('#number');
     $number.keyup(function() {
-        console.log($number.val());
         var number = $number.val();
         if(validNumber(number)) {
             enableButton();
