@@ -19,14 +19,17 @@ jQuery(document).ready(function($){
         $buttonText.html(buttonText);
     };
 
-    disableButton()
 
     var stripR = /[^0-9]/gi
+
+    var cleanNumber = function(number) {
+        return number.replace(stripR, '');
+    };
 
     var validNumber = function(number) {
         number = number.trim();
         if(number.indexOf('+') === 0) {
-            number = number.replace(stripR, '')
+            number = cleanNumber(number);
             return (number.length > 8);
         }
         else
@@ -43,6 +46,18 @@ jQuery(document).ready(function($){
             disableButton();
         }
     });
+
+    $button.click(function(){
+        number = cleanNumber($number.val());
+        mixpanel.alias(number);
+        mixpanel.track('payment started', {'$phone': number});
+        mixpanel.people.set({'$phone': number});
+        mixpanel.people.set_once('payment started', 0);
+        mixpanel.people.increment('payment started');
+    });
+
+    if (!validNumber($number.val()))
+        disableButton();
 
 
 
