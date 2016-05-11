@@ -4,6 +4,39 @@
 
 jQuery(document).ready(function($){
     //open the lateral panel
+    var queryString = function () {
+        // This function is anonymous, is executed immediately and
+        // the return value is assigned to QueryString!
+        var query_string = {};
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            // If first entry with this name
+            if (typeof query_string[pair[0]] === "undefined") {
+                query_string[pair[0]] = pair[1];
+                // If second entry with this name
+            } else if (typeof query_string[pair[0]] === "string") {
+                var arr = [ query_string[pair[0]], pair[1] ];
+                query_string[pair[0]] = arr;
+                // If third or later entry with this name
+            } else {
+                query_string[pair[0]].push(pair[1]);
+            }
+        }
+        return query_string;
+    } ();
+
+    var $number = $('#number');
+
+    if (queryString.phone) {
+        console.log("we have a phone: " + queryString.phone)
+        $number.val(queryString.phone)
+    }
+
+
+
+
     var $button = $('.stripe-button-el');
     var $buttonText = $($button.children('span')[0]);
 
@@ -36,7 +69,6 @@ jQuery(document).ready(function($){
             return false;
     };
 
-    var $number = $('#number');
     $number.keyup(function() {
         var number = $number.val();
         if(validNumber(number)) {
@@ -58,6 +90,9 @@ jQuery(document).ready(function($){
 
     if (!validNumber($number.val()))
         disableButton();
+
+
+
 
 
 
