@@ -655,3 +655,11 @@ input#number {
   height: 30px;
   padding: 5px;
 }
+
+.share-container {
+  margin-bottom: 30px;
+}
+
+.share-container > div {
+  margin: 15px 0;
+}

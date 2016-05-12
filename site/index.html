@@ -73,19 +73,23 @@
                        src="https://www.facebook.com/tr?id=982722181797116&ev=PageView&noscript=1"
                 /></noscript>
         <!-- End Facebook Pixel Code -->
+
+
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <!--<div id="fb-root"></div>-->
-        <!--<script>(function(d, s, id) {-->
-            <!--var js, fjs = d.getElementsByTagName(s)[0];-->
-            <!--if (d.getElementById(id)) return;-->
-            <!--js = d.createElement(s); js.id = id;-->
-            <!--js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&appId=630431227003582&version=v2.0";-->
-            <!--fjs.parentNode.insertBefore(js, fjs);-->
-        <!--}(document, 'script', 'facebook-jssdk'));</script>-->
+        <!-- Facebook javascript SDK -->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <!-- End Facebook javascript SDK -->
 
         <!-- Add your site or application content here -->
         <header id="menu">
@@ -111,9 +115,20 @@
             <!--<a href="#" class="macstore"><img src="img/macappstore.png" width="213" height="50"></a>-->
             <p class="download-container">
                 <a href="https://s3-eu-west-1.amazonaws.com/laplock/Laplock-1.0.4.zip" class="download"
-                   id="download">Download the
-                    app</a>
+                   id="download">Download the app</a>
             </p>
+            <div class="share-container">
+                You've just downloaded Laplock!<br>
+                Brag about it on Social media
+                <div>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="I just downloaded Laplock. Now I will be able to leave my macbook unattended without worrying!" data-via="laplockapp" data-size="large" data-dnt="true">Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </div>
+                <div class="fb-share-button"
+                     data-href="https://www.laplock.co"
+                     data-layout="button_count">
+                </div>
+            </div>
             <a href="https://facebook.com/laplock" class="social facebook" id="facebook">Facebook</a>
             <a href="https://twitter.com/laplockapp" class="social twitter" id="twitter">Twitter</a>
             <a href="#" class="social mail" id="mailing">Mailing list</a>
