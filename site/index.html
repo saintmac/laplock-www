@@ -74,7 +74,7 @@
 
             fbq('init', '982722181797116');
 //            fbq('track', "PageView");
-            fbq('track', "Homepage");
+            fbq('track', "home");
         </script>
         <noscript><img height="1" width="1" style="display:none"
                        src="https://www.facebook.com/tr?id=982722181797116&ev=PageView&noscript=1"
@@ -88,14 +88,23 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!-- Facebook javascript SDK -->
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId      : '167815643616548',
+                    xfbml      : true,
+                    version    : 'v2.6'
+                });
+            };
+
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
         <!-- End Facebook javascript SDK -->
 
         <!-- Add your site or application content here -->
@@ -125,15 +134,20 @@
                    id="download">Download the app</a>
             </p>
             <div class="share-container">
-                You've just downloaded Laplock!<br>
-                Brag about it on Social media
-                <div>
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="I just downloaded Laplock. Now I will be able to leave my macbook unattended without worrying!" data-via="laplockapp" data-size="large" data-dnt="true">Tweet</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                </div>
-                <div class="fb-share-button"
-                     data-href="http://www.laplock.co"
-                     data-layout="button_count">
+                <p>
+                    You've just downloaded Laplock!<br>
+                    Brag about it on Social media
+                </p>
+                <div class="share-buttons">
+                    <div class="twitter">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-text="I just downloaded Laplock. Now I will be able to leave my macbook unattended without worrying!" data-via="laplockapp" data-dnt="true">Tweet</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </div>
+
+                    <div class="fb-share-button"
+                         data-href="http://www.laplock.co"
+                         data-layout="button_count">
+                    </div>
                 </div>
             </div>
             <a href="https://facebook.com/laplock" class="social facebook" id="facebook">Facebook</a>

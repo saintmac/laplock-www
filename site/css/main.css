@@ -658,8 +658,31 @@ input#number {
 
 .share-container {
   margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  max-width: 300px;
+  padding: 10px 10px 1px 10px;
 }
 
-.share-container > div {
+.share-container > p {
+  margin: 0;
+  padding: 0;
+}
+
+.share-buttons .twitter {
+  position: relative;
+  top: 3px;
+}
+
+.share-container .fb-share-button {
+  margin-left: 15px;
+}
+
+
+.share-container .share-buttons {
   margin: 15px 0;
+}
+
+.share-container > .share-buttons > div {
+  display: inline-block;
 }
