@@ -695,3 +695,11 @@ input#number {
 .share-container > .share-buttons > div {
   display: inline-block;
 }
+
+.yearly {
+  padding: 0 10px;
+}
+
+.yearly.hidden {
+  display: none;
+}

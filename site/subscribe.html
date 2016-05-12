@@ -42,7 +42,7 @@
             $.src="//v2.zopim.com/?327mekQWnCZZ2Q6pPhAaN82pNsdHNtMv";z.t=+new Date;$.
                     type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
     </script>
-    <!--End of Zopim Live Chat Script-->
+    <!--End of Zopim Live Chat Script--
 
     <!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
     for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
@@ -101,18 +101,18 @@ mixpanel.track_links("#how", "Clicked How Link");
     <!--<h2>This page is a work in progress</h2>-->
     <a href="https://facebook.com/laplock" class="social facebook">Facebook</a>
     <a href="https://twitter.com/laplockapp" class="social twitter">Twitter</a>
-    <a href="#" class="social mail">Mailing list</a>
+    <a href="#" class="social mail no-auto">Mailing list</a>
 </div>
 <div style="margin-top: 100px; margin-left: 50px;">
-    <h2>To enable SMS notifications,<br>
+    <h2>To enable SMS notifications, you need to<br>
     buy a subscription for your phone number<br>
-        for <strike style="font-style: italic">&nbsp;$10&nbsp;</strike> $5 / year</h2>
+        for $2.99 / month or <strike style="font-style: italic">&nbsp;$35.99&nbsp;</strike> $19.99 / year</h2>
     <p>
     Your phone number should start with a country code,<br>such as <i>+1</i> for the US or <i>+33</i> for France.
     </p>
         <form action="https://laplock.herokuapp.com/pay" method="POST">
             <input type="text" name="number" id="number" placeholder="+1xxxxxxxxxx" autofocus="autofocus">
-            <input type="hidden" name="plan_id" value="n68xhryzerwpcv7">
+            <input type="hidden" name="plan_id" id="plan_id">
             <script>
                 if (navigator.userAgent.indexOf('Mac OS X') != -1) {
                     document.write('<input type="hidden" name="os" value="mac">');
@@ -121,12 +121,26 @@ mixpanel.track_links("#how", "Clicked How Link");
                     document.write('<input type="hidden" name="os" value="win">');
                 }
             </script>
+            <!--<span class="yearly">-->
+                <!--<input type="checkbox" id="yearly">-->
+                <!--<label for="yearly">Pay yearly</label>-->
+            <!--</span>-->
             <script
                     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                     data-key="pk_live_c9laRuyM6rjk57fSwaH0xaCr"
-                    data-amount="500"
+                    data-amount="299"
                     data-name="Laplock"
-                    data-description="subscription ($5/year)"
+                    data-label="Pay monthly: $2.99"
+                    data-description="Montly plan ($2.99 / month)"
+                    data-image="https://s3-eu-west-1.amazonaws.com/laplock/assets/laplock-128.png">
+            </script>
+            <script
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="pk_live_c9laRuyM6rjk57fSwaH0xaCr"
+                    data-amount="1999"
+                    data-name="Laplock"
+                    data-label="Pay yearly: $19.99"
+                    data-description="Yearly plan ($19.99 / year)"
                     data-image="https://s3-eu-west-1.amazonaws.com/laplock/assets/laplock-128.png">
             </script>
         </form>

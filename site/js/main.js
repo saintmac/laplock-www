@@ -27,7 +27,9 @@ jQuery(document).ready(function($){
 			
 	});
 	setTimeout(function() {
-		$('.mail').click()
+		$mail = $('.mail')
+		if (!$mail.hasClass('no-auto'))
+        	$mail.click()
 	}, 15000);
 
 	$('#download').on('click', function(event) {
