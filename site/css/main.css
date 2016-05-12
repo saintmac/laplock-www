@@ -662,6 +662,9 @@ input#number {
   border-radius: 10px;
   max-width: 300px;
   padding: 10px 10px 1px 10px;
+}
+
+.share-container.hidden {
   display: none;
 }
 
@@ -672,6 +675,7 @@ input#number {
 .share-container > p {
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .share-buttons .twitter {
