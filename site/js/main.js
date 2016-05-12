@@ -30,5 +30,11 @@ jQuery(document).ready(function($){
 		$('.mail').click()
 	}, 15000);
 
+	$('#download').on('click', function(event) {
+		console.log('downloaded');
+		$('.share-container').addClass('is-visible');
+	});
+
+
 
 });

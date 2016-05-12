@@ -662,6 +662,11 @@ input#number {
   border-radius: 10px;
   max-width: 300px;
   padding: 10px 10px 1px 10px;
+  display: none;
+}
+
+.share-container.is-visible {
+  display: block;
 }
 
 .share-container > p {
