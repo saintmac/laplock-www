@@ -34,6 +34,12 @@
     <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <meta property="og:url"           content="http://www.laplock.co" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Laplock: your macbook lock is your power cord!" />
+    <meta property="og:description"   content="With Laplock, leave your macbook unattended, worry free!" />
+    <meta property="og:image"         content="https://www.laplock.co/img/icons/128.png" />
+
     <!--Start of Zopim Live Chat Script-->
     <script type="text/javascript">
         window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
@@ -87,8 +93,27 @@ mixpanel.track_links("#how", "Clicked How Link");
 <!--}(document, 'script', 'facebook-jssdk'));</script>-->
 
 <!-- Add your site or application content here -->
+<!-- Facebook javascript SDK -->
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '167815643616548',
+            xfbml      : true,
+            version    : 'v2.6'
+        });
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- End Facebook javascript SDK -->
 <header id="menu">
-    <a href="http://www.laplock.co" id="logo"><img src="img/logo.png" width="58" height="33"> <span>Laplock</span></a>
+    <a href="https://www.laplock.co" id="logo"><img src="img/logo.png" width="58" height="33"> <span>Laplock</span></a>
     <!--<a href="#" id="how" class="button cd-btn">-->
         <!--How does it work?-->
     <!--</a>-->
@@ -107,20 +132,20 @@ mixpanel.track_links("#how", "Clicked How Link");
 <div style="margin-top: 100px; margin-left: 50px; font-weight: bold;">
     <h2>Payment successful :-)</h2>
     <p>You can now add your number to the app.</p>
-</div>
-<div class="share-container">
-    <p>
-        Brag about it on Social media
-    </p>
-    <div class="share-buttons">
-        <div class="twitter">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-text="I just downloaded Laplock. Now I will be able to leave my macbook unattended without worrying!" data-via="laplockapp" data-dnt="true">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-        </div>
+    <div class="share-container">
+        <p>
+            Help your community secure their macbook by sharing the tip on social media!
+        </p>
+        <div class="share-buttons">
+            <div class="twitter">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-text="I just downloaded Laplock. Now I will be able to leave my macbook unattended without worrying!" data-via="laplockapp" data-dnt="true">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
 
-        <div class="fb-share-button"
-             data-href="http://www.laplock.co"
-             data-layout="button_count">
+            <div class="fb-share-button"
+                 data-href="http://www.laplock.co"
+                 data-layout="button_count">
+            </div>
         </div>
     </div>
 </div>
@@ -156,7 +181,7 @@ mixpanel.track_links("#how", "Clicked How Link");
 <div class="bg-hover"></div>
 <div class="bg"></div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
